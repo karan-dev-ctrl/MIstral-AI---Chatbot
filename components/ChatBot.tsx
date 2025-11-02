@@ -51,13 +51,12 @@ export default function ChatBox() {
   }
 
 
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter" && !event.shiftKey) {
-      event.preventDefault();
-      sendMessage();
-    }
+ const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    sendMessage();
   }
-
+};
   
 
   return (
