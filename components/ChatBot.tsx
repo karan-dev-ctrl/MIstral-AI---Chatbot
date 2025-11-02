@@ -4,6 +4,7 @@ import { SendHorizonal, SendHorizontal } from "lucide-react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import {useEffect } from 'react'
+import React from "react";
  
 const serifFont = Tinos({
   subsets: ["latin"],
@@ -51,7 +52,7 @@ export default function ChatBox() {
   }
 
 
- const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+ const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
   if (event.key === "Enter" && !event.shiftKey) {
     event.preventDefault();
     sendMessage();
